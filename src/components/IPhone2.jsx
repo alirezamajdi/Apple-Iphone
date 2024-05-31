@@ -1,0 +1,150 @@
+import React, { useRef } from 'react'
+import { useGLTF } from '@react-three/drei'
+
+function Model(props) {
+    const { nodes, materials } = useGLTF('/models/iphone_14_pro.glb')
+    return (
+        <group {...props} dispose={null}>
+            <group position={[0.013, 0, 0]}>
+                <mesh
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_4.geometry}
+                    material={materials.frame}
+                />
+                <mesh
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_5.geometry}
+                    material={materials.FUNDO_SIN_CARD_21}
+                />
+                <mesh
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_6.geometry}
+                    material={materials.screen}
+                />
+                <mesh
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_7.geometry}
+                    material={materials.back}
+                />
+                <mesh
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_8.geometry}
+                    material={materials.island}
+                />
+                <mesh
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_9.geometry}
+                    material={materials.Labber}
+                />
+                <mesh
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_10.geometry}
+                    material={materials.GLASS}
+                />
+                <mesh
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_11.geometry}
+                    material={materials.Lenscover}
+                />
+                <mesh
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_12.geometry}
+                    material={materials.material}
+                />
+                <mesh
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_13.geometry}
+                    material={materials.material_9}
+                />
+                <mesh
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_14.geometry}
+                    material={materials['Material.003']}
+                />
+            </group>
+            <group position={[-0.045, 0, -0.009]} rotation={[-Math.PI, 0, -Math.PI]}>
+                <mesh
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_16.geometry}
+                    material={materials.frame}
+                />
+                <mesh
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_17.geometry}
+                    material={materials.FUNDO_SIN_CARD_21}
+                />
+                <mesh
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_18.geometry}
+                    material={materials.screen}
+                />
+                <mesh
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_19.geometry}
+                    material={materials.back}
+                />
+                <mesh
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_20.geometry}
+                    material={materials.island}
+                />
+                <mesh
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_21.geometry}
+                    material={materials.Labber}
+                />
+                <mesh
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_22.geometry}
+                    material={materials.GLASS}
+                />
+                <mesh
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_23.geometry}
+                    material={materials.Lenscover}
+                />
+                <mesh
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_24.geometry}
+                    material={materials.material}
+                />
+                <mesh
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_25.geometry}
+                    material={materials.material_9}
+                />
+                <mesh
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_26.geometry}
+                    material={materials['Material.003']}
+                />
+            </group>
+        </group>
+    )
+}
+
+export default Model
+
+useGLTF.preload('/models/iphone_14_pro.glb')
